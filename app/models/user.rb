@@ -5,4 +5,5 @@ class User < ApplicationRecord
   validates :email, presence: true, 
                     uniqueness: { case_sensitive: false }, 
                     length: { maximum: 105 }
+  validates_format_of :email, with: URI::MailTo::EMAIL_REGEXP
 end
