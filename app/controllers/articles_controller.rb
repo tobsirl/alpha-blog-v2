@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destory]
-
+  before_action :require_user, expect: [:show, :index]
+  
   def show
   
   end
