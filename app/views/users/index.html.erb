@@ -23,7 +23,7 @@
               <% end %>
               <% if current_user.admin? %>
                 <%= link_to "Delete user", user_path(user), class: "btn btn-outline-danger", method: :delete,
-                    data: {confirm: "Are you sure you want to delete the user and all related articles?"}
+                    data: { confirm: "Are you sure you want to delete the user and all related articles?" }
                 %>
               <% end %>
             <% end %>
